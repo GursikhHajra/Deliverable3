@@ -19,7 +19,6 @@ import org.junit.Ignore;
  */
 public class PlayerTest {
     
-    String p1;
     
     public PlayerTest() {
         
@@ -30,7 +29,7 @@ public class PlayerTest {
     @Test
     public void testSetPlayerId() {
         System.out.println("setPlayerId");
-        String ID = "100";
+        String ID = "";
         Player instance = new Player();
         instance.setPlayerId(ID);
         System.out.println(instance.getPlayerId());
