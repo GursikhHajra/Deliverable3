@@ -23,23 +23,6 @@ public class GameTest {
     }
 
     /**
-     * Test of main method, of class Game.
-     */
-    
-    
-    
-    @Ignore
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Game.main(args);
-        
-        
-        
-    }
-
-    /**
      * Test of drawCard method, of class Game.
      */
     @Test
@@ -53,10 +36,11 @@ public class GameTest {
             if(num == 25){
                 num = 0;
             }
-            
+          
             result = Game.drawCard(num);
             
         }while(!expResult.equals(result));
+        assertNotEquals(null,result);
         assertEquals(expResult,result);
     }
     
