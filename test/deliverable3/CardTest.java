@@ -24,8 +24,27 @@ public class CardTest {
         System.out.println("deckCreation");
         Card instance = new Card();
         instance.deckCreation();
-        
+        int expResult = 52;
+        assertEquals(expResult,instance.decksize,instance.cards.length);
     }
+    
+    @Test
+    public void testDeckCreation1() {
+        System.out.println("Check");
+        Card instance = new Card();
+        instance.deckCreation();
+        assertTrue(52 == instance.decksize);
+    }
+    
+    @Test
+    public void testDeckCreation2() {
+        System.out.println("Range creation");
+        Card instance = new Card();
+        instance.deckCreation();
+        assertTrue(((instance.cards.length <= 53) && (instance.cards.length >= 0)) && ((instance.decksize <= 53) && (instance.decksize >= 0)));
+    }
+    
+    
     
     
     
