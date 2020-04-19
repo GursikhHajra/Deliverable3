@@ -46,10 +46,18 @@ public class GameTest {
     public void testDrawCard() {
         System.out.println("drawCard");
         int num = 0;
-        String expResult = null;
+        String expResult = "ACE of DIAMONDS";
         String result = Game.drawCard(num);
-        assertNotEquals(expResult, result);
-        System.out.println(result);
+        do{
+            num++;
+            if(num == 25){
+                num = 0;
+            }
+            
+            result = Game.drawCard(num);
+            
+        }while(!expResult.equals(result));
+        assertEquals(expResult,result);
     }
     
     
